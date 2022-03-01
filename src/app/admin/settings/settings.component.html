@@ -1,0 +1,163 @@
+<div class="d-flex container pt-3">
+  <button class="btn btn-primary mr-3" (click)="onSave()">Save</button>
+  <button class="btn btn-secondary" routerLink="/memorial">Back to memorial</button>
+</div>
+
+<div class="container py-3">
+  <div class="card main-color-container">
+
+    <div class="logo">
+      <img class="logo-image" src="assets/images/logo-test.png" alt="">
+    </div>
+
+    <div class="color-select">
+
+      <div class="user-blur-color"></div>
+      <input class="user-main-color" type="color"
+             [(ngModel)]="mainColor" value="{{ mainColor }}">
+
+      <h4 class="color-value">{{ mainColor }}</h4>
+    </div>
+
+
+  </div>
+
+  <div class="card themes-container mt-4 p-4">
+    <h5 class="font-weight-bold">Themes</h5>
+
+    <div class="d-flex themes">
+      <div class="standard-layout">
+        <div class="layout-header"></div>
+
+        <ng-container [ngSwitch]="true">
+          <ng-container *ngSwitchDefault>
+            <ng-container *ngTemplateOutlet="standard"></ng-container>
+          </ng-container>
+          <ng-container *ngSwitchCase=" currentTheme === 1">
+            <ng-container *ngTemplateOutlet="newGeneration"></ng-container>
+          </ng-container>
+          <ng-container *ngSwitchCase=" currentTheme === 2">
+            <ng-container *ngTemplateOutlet="netNotice"></ng-container>
+          </ng-container>
+        </ng-container>
+
+      </div>
+
+      <div class="ml-3 w-100">
+        <div class="theme-title">Standard Theme</div>
+        <p class="dummy-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Habitasse potenti vestibulum, elementum, sed. Feugiat
+          vestibulum non quis sapien nisl netus eget egestas quam. Mauris vel sit suspendisse turpis. Commodo, elementum
+          pulvinar diam non eu et neque neque nibh. Risus proin adipiscing convallis sit mi, lorem. Id ac nisl sit
+          ultrices nec velit. Vel fringilla consectetur.
+        </p>
+        <div class="theme-action mr-3"></div>
+      </div>
+    </div>
+
+    <div class="theme-selection">
+      <i class="bi bi-chevron-left" (click)="previousTheme()"></i>
+      <div class="d-flex">
+        <div class="theme" [ngClass]="{'active': currentTheme === 0}" (click)="currentTheme = 0"></div>
+        <div class="theme" [ngClass]="{'active': currentTheme === 1}" (click)="currentTheme = 1"></div>
+        <div class="theme" [ngClass]="{'active': currentTheme === 2}" (click)="currentTheme = 2"></div>
+      </div>
+      <i class="bi bi-chevron-right" (click)="nextTheme()"></i>
+    </div>
+
+  </div>
+
+  <div class="card banner-picture-container mt-4 p-3">
+    <label class="form-label">Banner URL</label>
+    <input type="text" class="form-control" [(ngModel)]="bannerURL">
+
+    <div class="mt-4">
+      <p>Demo link</p>
+
+      <ul>
+        <li *ngFor="let url of demoBannerURL" class="mt-3">
+
+          {{ url }}
+
+          <img src="{{ url }}" style="height: 30px" alt="">
+
+          <button (click)="copyLink(url)" class="btn btn-outline-primary btn-sm float-right">
+            <i class="bi bi-files text-primary"></i>
+          </button>
+
+        </li>
+      </ul>
+
+    </div>
+
+  </div>
+
+  <div class="card search-container mt-4">
+    <table class="table">
+      <thead>
+      <tr>
+        <th scope="col">Search Areas</th>
+        <th scope="col">Available</th>
+        <th scope="col">Default</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <th>Funeral Home</th>
+        <td>
+          <div class="checkbox cube"></div>
+        </td>
+        <td>
+          <div class="checkbox circle"></div>
+        </td>
+      </tr>
+      <tr>
+        <th>National Search</th>
+        <td>
+          <div class="checkbox cube"></div>
+        </td>
+        <td>
+          <div class="checkbox circle"></div>
+        </td>
+      </tr>
+      <tr>
+        <th>Global Search</th>
+        <td>
+          <div class="checkbox cube"></div>
+        </td>
+        <td>
+          <div class="checkbox circle"></div>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card snippet-link-container mt-4">
+    <h5 class="font-weight-bold">Snippet Link</h5>
+
+    <div class="link-container d-flex align-items-center">
+      <strong class="link-snippet">
+        &lt;script src="https:/adstate/assets/js/sdk.js"&gt;&lt;/script&gt;
+      </strong>
+
+      <i class="bi bi-files ml-3" style="font-size: 28px"></i>
+    </div>
+  </div>
+
+</div>
+
+
+<ng-template #standard>
+  <app-standard-template></app-standard-template>
+</ng-template>
+
+<ng-template #newGeneration>
+  <app-new-generation-template></app-new-generation-template>
+</ng-template>
+
+<ng-template #netNotice>
+  <app-net-notice-template></app-net-notice-template>
+</ng-template>
+
+

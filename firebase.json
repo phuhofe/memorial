@@ -1,0 +1,16 @@
+{
+  "hosting": {
+    "public": "dist/ng-ourmemorial",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

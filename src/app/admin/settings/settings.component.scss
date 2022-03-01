@@ -1,0 +1,189 @@
+.container {
+  width: 800px;
+}
+
+.card {
+  background: #FFFFFF;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+}
+
+.main-color-container {
+  height: 320px;
+  position: relative;
+
+  .user-main-color {
+    width: 57px;
+    height: 57px;
+    border-radius: 50%;
+    background: #17313B;
+    position: absolute;
+    bottom: 70px;
+    left: 45%;
+    padding: 0;
+
+    &:focus {
+      outline: none !important;
+    }
+
+    &::-webkit-color-swatch-wrapper {
+      padding: 0;
+    }
+
+    &::-webkit-color-swatch {
+      border-radius: 40px;
+    }
+
+  }
+
+  .user-blur-color {
+    height: 58px;
+    width: 58px;
+    background: #17313B;
+    opacity: 0.5;
+    filter: blur(15px);
+    position: absolute;
+    bottom: 68px;
+    left: 45%;
+  }
+
+
+  .logo-image {
+    position: absolute;
+    top: 41px;
+    left: 28%;
+  }
+
+  .color-value {
+    position: absolute;
+    bottom: 0;
+    left: 43%;
+    margin-bottom: 1rem !important;
+  }
+
+}
+
+.banner-picture-container {
+  //height: 188px;
+}
+
+.search-container {
+  height: 400px;
+  padding: 35px 45px;
+
+
+  .table {
+    font-size: 1.25rem;
+
+    th, td {
+      height: 75px;
+      vertical-align: middle;
+      border-top: 0 !important;
+      padding: 0;
+    }
+
+    .checkbox {
+      height: 40px;
+      width: 40px;
+
+      &.cube {
+        background: #0D80F2;
+        margin-left: 1.5rem;
+      }
+
+      &.circle {
+        border-radius: 50%;
+        background: #0D80F2;
+        margin-left: 1rem;
+      }
+    }
+  }
+}
+
+.snippet-link-container {
+  height: 174px;
+  padding: 2rem;
+
+  .link-container {
+    height: 40px;
+    margin-top: 1.5rem;
+
+    .link-snippet {
+      width: 528px;
+      font-size: 18px;
+      background: #EEEEEE;
+      padding: 0.5rem;
+    }
+  }
+}
+
+.themes-container {
+  height: 540px;
+
+  .themes {
+    margin-top: 80px;
+  }
+
+  .standard-layout {
+    width: 370px;
+    height: 320px;
+    background: #C4C4C4;
+    border-radius: 12px;
+    padding: 48px 24px;
+
+    .layout-header {
+      height: 14px;
+      border-radius: 12px;
+      background: #666666;
+      margin: auto;
+    }
+  }
+
+  .theme-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 2rem;
+  }
+
+  .dummy-text {
+    margin-bottom: 2rem;
+    color: #9F9F9F;
+  }
+
+  .theme-action {
+    width: 113px;
+    height: 28px;
+    background: #C4C4C4;
+    border-radius: 19px;
+    float: right;
+  }
+
+  .theme-selection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 18px;
+
+    .theme {
+      height: 25px;
+      width: 25px;
+      border-radius: 50%;
+      background: #C4C4C4;
+      margin: 0 4px;
+
+      &.active {
+        background: #666666
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+

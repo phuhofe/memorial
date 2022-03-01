@@ -1,0 +1,9 @@
+<div class="card-container mb-3" *ngFor="let user of users | slice: 0 : displayNumber">
+  <div class="user-information">
+    <p class="mb-0 user-information-name">{{ user.name }}</p>
+    <p class="user-information-place"> {{ user.date }} {{ user.place }}</p>
+  </div>
+  <div class="user-image"
+       [ngStyle]="{'background-image': 'url(' + user.thumbnail + ')'}">
+  </div>
+</div>

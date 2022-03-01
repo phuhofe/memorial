@@ -1,0 +1,90 @@
+.list-container {
+  position: relative;
+
+  .list-container-thumbnail {
+    //background: url(https://davekochphoto.com/wp-content/uploads/2018/05/8103540-Edit.jpg);
+    background-size: cover;
+    opacity: 0.4;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+.form-select {
+  height: 30px;
+  font-size: 14px;
+  padding: 0 10px;
+  border-radius: 5px;
+}
+
+.btn-custom {
+  height: 39px;
+  background: #26343E;
+  color: #C0B59E;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px; position: relative;
+  z-index: 2;
+}
+
+.view-container {
+  padding: 0 220px;
+  position: relative;
+
+  .view-container-thumbnail {
+    //background: url(https://iso.500px.com/wp-content/uploads/2014/07/big-one.jpg);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0.5;
+    background-size: cover;
+  }
+
+  .view {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.search-container {
+  height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+
+  .search-thumbnail {
+    //background: url('https://www.arohatours.co.nz/media/1645/banner_queenstown-g.jpg?mode=crop&height=700&width=1920&quality=80')center no-repeat;
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+    background-size: cover;
+  }
+
+  .action-container {
+    .bi {
+      font-size: 1.25rem;
+    }
+
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+  app-search {
+    position: absolute;
+  }
+}
+
+.actions {
+  position: absolute;
+  left: 1rem;
+  font-size: 1.25rem;
+}
